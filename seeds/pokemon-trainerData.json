@@ -1,0 +1,19 @@
+[
+    {
+      "name": "Trainer",
+      "description": "A person who trains pokemon for league battles."
+    },
+    {
+      "name": "Pokemon",
+      "description": "Creatures of all shapes and sizes who live in the wild or with their trainers."
+    },
+    {
+      "name": "Pokemon Types",
+      "description": "Bug, Dark, Dragon, Electric, Fairy, Fighting, Fire, Flying, Ghost, Grass, Ground, Ice, Normal, Poison, Psychic, Rock, Steel, Water"
+    },
+    {
+      "name": "Pokeball",
+      "description": "The device that is used to catch pokemon."
+    }
+  ]
+  
