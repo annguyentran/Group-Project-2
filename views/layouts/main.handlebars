@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
+  <link rel="stylesheet" href="/public/styles/styles.css" media="screen" title="no title" charset="utf-8">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
@@ -16,25 +16,22 @@
     crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-  <title>Home Page</title>
+  
+  <title>Pokedex n Trainers</title>
 
-  <script src=""></script>
 </head>
 
 <body>
-  {{{body}}}
-
-  <script type="text/javascript">
-  
-
-    $(document).ready(function () {
-      var windowLoc = $(location).attr('pathname');
-     
-
-      var choice;
-   
-    
-  </script>
-</body>
+  <div class="flex-column justify-space-around">
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        Welcome to the Pokedex!
+      </h1>
+    </header>
+      <main class="container container-fluid mt-5">
+        {{{ body }}}
+      </main>
+  </div>
+  </body>
 
 </html>
