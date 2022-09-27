@@ -1,5 +1,5 @@
-.body {
-
+body {
+background-color: red;
 }
 
 .list-group-item {
@@ -31,14 +31,6 @@
 .Button {
   position: relative;
   float: right;
-}
-
-#main  {
-  font-family: 'Amatic SC'
-  font-size: 5rem;
-  color: green;
-  bottom: 325px;
-  position: relative;
 }
 
 .Buttons {

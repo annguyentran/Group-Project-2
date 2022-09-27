@@ -16,6 +16,11 @@ Trainer.init(
         allowNull: false,
       },
 
+      description: {
+        type: DataTypes.STRING,
+        allowNull: false,
+    }
+
 
 },
 
