@@ -1,0 +1,21 @@
+<!-- Loop over each object in the projects array -->
+{{#each Trainers as |Trainer| }}
+<div class="row mb-4 project">
+  <div class="col-md-5">
+    <h2>
+      <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+      {{{get_Trainer}}}
+      <a href="/trainer/{{trainer.id}}">{{trainer.name}}</a>
+    </h2>
+    <p>
+      <!-- Pass needed_funding value to the helper function -->
+      <span class="Description">{{trainer.description}}</span>
+    </p>
+  </div>
+  <div class="col-md-7">
+    <p>
+      {{trainer.description}}
+    </p>
+  </div>
+</div>
+{{/each}}
