@@ -1,4 +1,4 @@
-const { getPokemon, getAllPokemon, getAllPokemonNames } = require("pkmonjs");
+const { getPokemon, getAllPokemon, getAllPokemonNames} = require("pkmonjs");
 
 // const poke = getPokemon("squirtle").then((pokemon))=>
 // {
@@ -7,6 +7,7 @@ const { getPokemon, getAllPokemon, getAllPokemonNames } = require("pkmonjs");
 //    }
 // }
 // )
+
 async function getAll(){
     const names =await getAllPokemonNames()
     console.log(names)

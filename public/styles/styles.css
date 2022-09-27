@@ -1,6 +1,37 @@
+@import url('https://css.gg/pokemon.css');
+
 body {
 background-color: red;
+font-family: 'Poppins', sans-serif;
 }
+
+.gg-pokemon {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 18px;
+  height: 18px;
+  border: 5px solid transparent;
+  box-shadow:
+      0 0 0 2px,
+      inset 0 0 0 2px;
+  border-radius: 100%
+}
+.gg-pokemon::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-left: 8px solid;
+  border-right: 8px solid;
+  left: -6px;
+  top: 3px
+}
+
+@import url('https://www.kindpng.com/picc/m/544-5445512_pokemon-trainer-red-sprites-hd-png-download.png')(max-width: 400px);
 
 .list-group-item {
   line-height: 2.5;
@@ -17,6 +48,7 @@ background-color: red;
   position:relative;
   right: 23%;
   bottom:12rem;
+  color: cornflowerblue;
 }
 
 
@@ -25,6 +57,7 @@ background-color: red;
   position:relative;
   left: 60%;
   bottom:12rem;
+  color: cornflowerblue;
 }
 
 
