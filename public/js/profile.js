@@ -5,7 +5,7 @@ const newFormHandler = async (event) => {
   const description = document.querySelector('#trainer-desc').value.trim();
 
   if (name && description) {
-    const response = await fetch(`/api/projects`, {
+    const response = await fetch(`/api/trainer-routes`, {
       method: 'POST',
       body: JSON.stringify({ name, description }),
       headers: {
@@ -14,7 +14,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/trainer');
     } else {
       alert('Failed to create trainer');
     }
@@ -25,12 +25,12 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/projects/${id}`, {
+    const response = await fetch(`/api/trainer-routes/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
-      document.location.replace('/profile');
+      document.location.replace('/trainer');
     } else {
       alert('Failed to delete trainer');
     }
