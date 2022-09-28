@@ -1,3 +1,38 @@
+@import url('https://css.gg/pokemon.css');
+
+body {
+background-color: red;
+font-family: 'Poppins', sans-serif;
+}
+
+.gg-pokemon {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 18px;
+  height: 18px;
+  border: 5px solid transparent;
+  box-shadow:
+      0 0 0 2px,
+      inset 0 0 0 2px;
+  border-radius: 100%
+}
+.gg-pokemon::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  border-left: 8px solid;
+  border-right: 8px solid;
+  left: -6px;
+  top: 3px
+}
+
+@import url('https://www.kindpng.com/picc/m/544-5445512_pokemon-trainer-red-sprites-hd-png-download.png')(max-width: 200px);
+
 .list-group-item {
   line-height: 2.5;
 }
@@ -13,60 +48,22 @@
   position:relative;
   right: 23%;
   bottom:12rem;
+  color: cornflowerblue;
 }
 
-.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
-  position: absolute;
-  left: 10px;
-  border-bottom-color: goldenrod;
-}
-
-.tooltip-inner {
-  position: relative;
-  left:10px;
-  color: white !important;
-  text-align: center;
-  background-color:goldenrod !important;
-  border-radius: .25rem;
-}
 
 .Button {
   /*margin-left: 190px;*/
   position:relative;
   left: 60%;
   bottom:12rem;
+  color: cornflowerblue;
 }
 
 
 .Button {
   position: relative;
   float: right;
-}
-
-iframe {
-  z-index: 100;
-  margin-left: 30%;
-  margin-right: 30%;
-  position: relative;
-  top: 5%;
-}
-
-span {
-  overflow: hidden;
-}
-
-.test1 {
-  text-align:center;
-  height: 25rem;
-}
-
-
-#main  {
-  font-family: 'Amatic SC'
-  font-size: 5rem;
-  color: green;
-  bottom: 325px;
-  position: relative;
 }
 
 .Buttons {
@@ -76,38 +73,9 @@ span {
 
 hr {
   border: 1px solid black !important;
-  
-  -webkit-animation: line 2s;
   animation-delay: 2s;
 }
 
-
-@-webkit-keyframes test {
-  0% {
-    opacity: 1;
-
-	-webkit-transform: translate(0, 0px);
-  }
-  30% {
-    opacity: 1;
-
-	
-  }
-  50% {
-    opacity: 0;
-    -webkit-transform: translate(0px, 400px); 
-  }
-  75% {
-    opacity: 1;
-
-	-webkit-transform: translate(0px, 600px); 
-  }
-  100% {
-    opacity: 0;
-
-	-webkit-transform: translate(0px, 800px);
-  }
-}
 
 /* main container */
 .container{
@@ -118,94 +86,4 @@ hr {
 	position:relative;
 	left:0%;
 	background:white center top no-repeat;
-}
-
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(-200px, 0px);
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes likelinevertical {
-  0% {
-    top: 100px;
-    height: 100px;
-    width: 10px;
-    opacity: 1;
-  }
-  55% {
-    opacity: 0;
-  }
-  100% {
-    top: 0px;
-    height: 0px;
-    width: 10px;
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes likelinehorizontal {
-  0% {
-    top: 145px;
-    height: 10px;
-    -webkit-transform: scale(1.0);
-    width: 100px;
-    opacity: 1;
-  }
-  100% {
-    top: 0px;
-    height: 10px;
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes dislikelinehorizontal {
-  0% {
-    bottom: 145px;
-    height: 10px;
-    -webkit-transform: scale(1.0);
-    width: 100px;
-    opacity: 1;
-  }
-  100% {
-    bottom: 0px;
-    height: 10px;
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes fadeinNoSlide {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeInSlide {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate(-200px, 0px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translate(0px, 0px);
-  }
-
-}
-
-@-webkit-keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
