@@ -1,20 +1,20 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Trainer extends Model {}
+class Trainer extends Model { }
 
 Trainer.init(
-    {
+  {
     id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true,
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-      },
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
 
       description: {
         type: DataTypes.STRING,
@@ -22,9 +22,9 @@ Trainer.init(
     }
 
 
-},
+  },
 
-{
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,

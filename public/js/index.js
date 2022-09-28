@@ -21,6 +21,26 @@ const trainer = async (event) => {
   }
 };
 
+async function getSixPokemon() {
+
+  const pokemonData = await getAllPokemon()
+    
+  let pokemonArray = [];
+
+  while (pokemonArray.length<6){
+      let randomIndex = Math.floor(Math.random() * 151);
+      let pokemon = {
+          name: pokemonData[randomIndex].name,
+          id: pokemonData[randomIndex].idPokedex,
+          description: pokemonData[randomIndex].description
+      }
+      pokemonArray.push(pokemon);
+     
+  }
+  return pokemonArray 
+}
+
+
 
 
 const newTrainer = async (event) => {
