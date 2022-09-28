@@ -9,9 +9,12 @@ if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
 } else {
   sequelize = new Sequelize(
-    process.env.DB_NAME,
-    process.env.DB_USER,
-    process.env.DB_PASSWORD,
+    // process.env.DB_NAME,
+    // process.env.DB_USER,
+    // process.env.DB_PASSWORD,
+
+    "pokemon_db","root","",
+
 
     {
       host: 'localhost',
@@ -23,11 +26,7 @@ if (process.env.JAWSDB_URL) {
 
 
 
-// const sequelize = new Sequelize("pokemon_db", "root", "Hymco2-byreg",{
-//   host: 'localhost',
-//   dialect: 'mysql',
- 
-// })
+
 
 
 module.exports = sequelize;

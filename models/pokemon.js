@@ -17,6 +17,11 @@ Pokemon.init(
             allowNull: false,
         },
 
+        description: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+
 
     },
 
@@ -27,7 +32,6 @@ Pokemon.init(
     underscored: true,
     modelName: 'pokemon',
 }
-
 
 
 )

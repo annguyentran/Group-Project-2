@@ -7,10 +7,18 @@ const pokemonData = require('./projectData.json');
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const Trainer = await Trainer.bulkCreate(trainerData, {
-    
+  const trainers = await Trainer.bulkCreate(trainerData, {
+    individualHooks: true, 
+    returning: true
   });
 
+for (const pokemon of pokemonData) {
+  await Pokemon.create({
+    ...pokemon,
+    trainerId: trainers[Math.floor(Math.random()*trainers.length)].id,
+  });
+
+}
 
 
   process.exit(0);
