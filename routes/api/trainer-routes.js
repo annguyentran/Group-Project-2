@@ -18,6 +18,51 @@ router.get('/', async (req, res) => {
 
 });
 
+router.post('/login', async (req, res) => {
+  try {
+    // Find the user who matches the posted e-mail address
+    const trainerData = await Trainer.findOne({ where: { email: req.body.email } });
+
+    if (!trainerData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    const validPassword = await trainerData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password, please try again' });
+      return;
+    }
+
+    req.session.save(() => {
+        req.session.trainer_id = trainerData.id;
+        req.session.logged_in = true;
+        
+        res.json({ trainer: trainerData, message: 'You are now logged in!' });
+      });
+    } catch (err) {
+        res.status(400).json(err);
+      }
+    });
+
+    router.post('/logout', (req, res) => {
+      if (req.session.logged_in) {
+        // Remove the session variables
+        req.session.destroy(() => {
+          res.status(204).end();
+        });
+      } else {
+        res.status(404).end();
+      }
+    });
+
+
+
 // get one trainer and all of their pokemon 
 
 router.get('/:id', async (req, res) => {
@@ -54,7 +99,7 @@ router.post('/trainer', async (req, res) => {
     }
 
     for(let i = 0; i < pokemonIds.length; i++) {
-      let pokemonId = randomIndex[i]
+      let pokemonId = randomIds[i]
       PokemonTrainer.create({
         trainer_id: trainer.id,
         pokemon_id: pokemonId

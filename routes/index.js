@@ -1,14 +1,12 @@
 const router = require('express').Router();
 const apiRoutes = require('./api');
-const homepage = require('./homepage');
+const homepage = require('./homepageroutes');
+const trainerProfile = require('./trainerprofile');
 
 router.use('/api', apiRoutes);
-router.use('/', homepage)
+router.use('/', homepage);
+router.use('/profile', trainerProfile);
 
-
-router.use((req, res) => {
-  res.send("<h1>The Journey Begins Elsewhere!</h1>")
-});
 
 
 module.exports = router;
