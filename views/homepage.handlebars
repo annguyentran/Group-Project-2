@@ -1,50 +1,29 @@
+<link rel="stylesheet" href="/styles/homepage.css">
 <div id="home">
   <div class="container">
 
     <div class="row">
       <div class="col-8 offset-2">
-        <h1 id="Pokemon">{{msg}}</h1>
 
+        <div id="imageContainer">
+          <img src="/images/bulbasaur.jpg" width="200px" height="200px" alt="bulbasaur">
+          <img src="/images/Charmander.png" width="200px" height="200px" alt="charmander">
+          <img src="/images/squirtle.jpg" width="200px" height="200px" alt="squirtle">
+        </div>
         <h3 id="yourChoice"></h3>
         <h2 id="test">Battle!</h2>
-        <br>
-        
-        <h3 style="visibility:hidden">Trainers!</h3>
 
-        <ul id="example-list" class="list-group-item local-render" style="visibility:hidden">
-
-
-          <li><strong>Trainer! </strong>{{Trainer}}
-            <br>
-            <strong>Pokemon! </strong>{{Pokemon}}
-            <br>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          <br>
-
-          {{/each}}
-
-          <a href="/login">login</a>
+        <a href="/profile">profile</a>
+        <a href="/profile/logout">logout</a>
+        <a href="/profile/login">login</a>
+        <a href="/profile/signup">signup</a>
 
         </ul>
       </div>
 
     </div>
 
-    <div class="modal" id="selectionModal" tabindex="-1" role="dialog">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Fight!</h5>
-          </div>
-          <div class="modal-body">
-            <button type="button" class="btn btn-success selectButton" choice="recommend">Attack!</button>
-          </div>
-          <div class="modal-footer">
-          </div>
-        </div>
-      </div>
-    </div>
+
 
   </div>
 </div>
