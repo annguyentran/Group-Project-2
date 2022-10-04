@@ -8,3 +8,5 @@ pokemon series.
 
 
 <img width="960" alt="Pokedex Screenshot" src="https://user-images.githubusercontent.com/107017473/193541015-12a724fc-e7af-421b-9ab1-bbc70d3ee609.png">
+
+Deployed: https://pokedex-project.herokuapp.com/
